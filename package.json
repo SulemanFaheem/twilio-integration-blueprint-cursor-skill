@@ -1,0 +1,24 @@
+{
+  "name": "twilio-integration-blueprint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Copy-paste Twilio Verify OTP blueprint: Express API + Expo, React Native bare, and Flutter clients",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "test": "npm run test --workspace=@twilio-blueprint/api --if-present && npm run test --workspace=@twilio-blueprint/shared --if-present",
+    "test:api": "npm run test --workspace=@twilio-blueprint/api",
+    "dev:api": "node init && npm run dev --workspace=@twilio-blueprint/api",
+    "build:api": "node init && npm run build --workspace=@twilio-blueprint/api"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
